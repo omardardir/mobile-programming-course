@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'BusScreen.dart';
+import 'WelcomeScreen.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -19,14 +19,10 @@ class _SignupScreenState extends State<SignupScreen> {
   void _submit() {
     if (!_formKey.currentState!.validate()) return;
 
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('Welcome, ${_nameController.text.trim()}!')),
-    );
-
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => const BusScreen(),
+        builder: (context) => WelcomeScreen(name: _nameController.text.trim()),
       ),
     );
   }
@@ -129,6 +125,7 @@ class Validators {
     if (name.isEmpty) {
       return 'Please enter your name';
     }
+    return null;
   }
 
   static String? validateEmail(String? value) {
@@ -136,6 +133,7 @@ class Validators {
     if (email.isEmpty) {
       return 'Please enter your email';
     }
+    return null;
   }
 
   static String? validatePhone(String? value) {
@@ -143,6 +141,7 @@ class Validators {
     if (phone.isEmpty) {
       return 'Please enter your phone number';
     }
+    return null;
   }
 
   static String? validateGender(String? value) {

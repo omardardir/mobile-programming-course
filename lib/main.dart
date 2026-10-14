@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'BusScreen.dart';
+import 'SignupScreen.dart';
 
 void main() {
   runApp(const SaffarniApp());
@@ -66,7 +66,7 @@ class StartScreen extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               const Text(
-                'Saffarni',
+                'GoBus',
                 style: TextStyle(
                   fontSize: 32,
                   fontWeight: FontWeight.bold,
@@ -85,11 +85,11 @@ class StartScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const BusScreen(),
+                      builder: (context) => const SignupScreen(),
                     ),
                   );
                 },
-                child: const Text('Book a Bus'),
+                child: const Text('Get Started'),
               ),
               const SizedBox(height: 12),
 

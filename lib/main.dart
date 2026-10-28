@@ -25,7 +25,7 @@ class _SaffarniAppState extends State<SaffarniApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Saffarni App',
+      title: ' GoBus',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,

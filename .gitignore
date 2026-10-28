@@ -1,0 +1,113 @@
+# ---------------------------------------------------------------
+# OS generated files
+# ---------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ---------------------------------------------------------------
+# Miscellaneous
+# ---------------------------------------------------------------
+*.class
+*.log
+*.pyc
+*.swp
+*.swo
+*~
+*.tmp
+*.bak
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# ---------------------------------------------------------------
+# IDEs
+# ---------------------------------------------------------------
+# IntelliJ / Android Studio
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# VS Code: ignore personal settings but keep shared launch/task configs
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/extensions.json
+
+# ---------------------------------------------------------------
+# Flutter / Dart / Pub
+# ---------------------------------------------------------------
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+/coverage/
+.widget_preview/
+
+# Flutter version manager
+.fvm/flutter_sdk
+.fvmrc.local
+
+# Symbolication / obfuscation output
+app.*.symbols
+app.*.map.json
+
+# ---------------------------------------------------------------
+# Android
+# ---------------------------------------------------------------
+/android/app/debug
+/android/app/profile
+/android/app/release
+/android/.gradle
+/android/.kotlin
+/android/local.properties
+/android/captures/
+**/android/**/GeneratedPluginRegistrant.java
+
+# ---------------------------------------------------------------
+# iOS / macOS
+# ---------------------------------------------------------------
+**/Pods/
+**/xcuserdata/
+**/DerivedData/
+**/Flutter/Generated.xcconfig
+**/Flutter/flutter_export_environment.sh
+**/Flutter/ephemeral/
+**/GeneratedPluginRegistrant.*
+
+# ---------------------------------------------------------------
+# Secrets & signing — never commit these
+# ---------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks
+key.properties
+*.p12
+*.p8
+*.mobileprovision
+*.pem
+
+# Firebase config files (uncomment if you add Firebase and keep the
+# repo public; otherwise these are usually safe to commit)
+# android/app/google-services.json
+# ios/Runner/GoogleService-Info.plist
+# macos/Runner/GoogleService-Info.plist
+# lib/firebase_options.dart

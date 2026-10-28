@@ -13,7 +13,7 @@ class _SignupScreenState extends State<SignupScreen> {
   final _nameController = TextEditingController();
   final _emailController = TextEditingController();
   final _phoneController = TextEditingController();
-  String? _gender;
+  final _genderController = TextEditingController();
 
 
   void _submit() {
@@ -71,10 +71,9 @@ class _SignupScreenState extends State<SignupScreen> {
                   TextFormField(
                     controller: _phoneController,
                     keyboardType: TextInputType.phone,
-                    textInputAction: TextInputAction.done,
+                    textInputAction: TextInputAction.next,
                     decoration: const InputDecoration(
                       labelText: 'Phone Number',
-                      hintText: '01XXXXXXXXX',
                       prefixIcon: Icon(Icons.phone),
                       border: OutlineInputBorder(),
                     ),
@@ -82,22 +81,14 @@ class _SignupScreenState extends State<SignupScreen> {
                   ),
                   const SizedBox(height: 16),
 
-                  DropdownButtonFormField<String>(
-                    initialValue: _gender,
+                  TextFormField(
+                    controller: _genderController,
+                    textInputAction: TextInputAction.done,
                     decoration: const InputDecoration(
                       labelText: 'Gender',
                       prefixIcon: Icon(Icons.wc),
                       border: OutlineInputBorder(),
                     ),
-                    items: const [
-                      DropdownMenuItem(value: 'Male', child: Text('Male')),
-                      DropdownMenuItem(value: 'Female', child: Text('Female')),
-                    ],
-                    onChanged: (value) {
-                      setState(() {
-                        _gender = value;
-                      });
-                    },
                     validator: Validators.validateGender,
                   ),
                   const SizedBox(height: 24),
@@ -145,8 +136,9 @@ class Validators {
   }
 
   static String? validateGender(String? value) {
-    if (value == null || value.isEmpty) {
-      return 'Please select your gender';
+    final gender = value?.trim() ?? '';
+    if (gender.isEmpty) {
+      return 'Please enter your gender';
     }
     return null;
   }
